@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Phonebook", "01.Phonebook\01.Phonebook.csproj", "{08339A5E-A57C-4747-943A-0E5477563BD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Phonebook", "01.Phonebook\01.Phonebook.csproj", "{08339A5E-A57C-4747-943A-0E5477563BD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Phonebook-Upgrade", "02.Phonebook-Upgrade\02.Phonebook-Upgrade.csproj", "{A2D46039-46B2-432B-8ACB-8C69FE7B3F6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.Phonebook-Upgrade", "02.Phonebook-Upgrade\02.Phonebook-Upgrade.csproj", "{A2D46039-46B2-432B-8ACB-8C69FE7B3F6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.A-Miner-Task", "03.A-Miner-Task\03.A-Miner-Task.csproj", "{70F8C93C-61DA-4CF3-8AAB-6A43B8993053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.A-Miner-Task", "03.A-Miner-Task\03.A-Miner-Task.csproj", "{70F8C93C-61DA-4CF3-8AAB-6A43B8993053}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.Fix-Emails", "04.Fix-Emails\04.Fix-Emails.csproj", "{696A8116-8BA0-4098-A418-B4435EF303F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Hands-of-Cards", "05.Hands-of-Cards\05.Hands-of-Cards.csproj", "{0C5FA656-0A9E-47B6-ADA2-4BA10505091C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.User-Logs", "06.User-Logs\06.User-Logs.csproj", "{356526A2-6ED3-4634-8710-E55DB5CF1D2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.Population-Counter", "07.Population-Counter\07.Population-Counter.csproj", "{1505076C-8CDF-41F3-A662-E0DB87651754}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +35,22 @@ Global
 		{70F8C93C-61DA-4CF3-8AAB-6A43B8993053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70F8C93C-61DA-4CF3-8AAB-6A43B8993053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70F8C93C-61DA-4CF3-8AAB-6A43B8993053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{696A8116-8BA0-4098-A418-B4435EF303F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696A8116-8BA0-4098-A418-B4435EF303F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696A8116-8BA0-4098-A418-B4435EF303F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696A8116-8BA0-4098-A418-B4435EF303F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C5FA656-0A9E-47B6-ADA2-4BA10505091C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C5FA656-0A9E-47B6-ADA2-4BA10505091C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C5FA656-0A9E-47B6-ADA2-4BA10505091C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C5FA656-0A9E-47B6-ADA2-4BA10505091C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{356526A2-6ED3-4634-8710-E55DB5CF1D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356526A2-6ED3-4634-8710-E55DB5CF1D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356526A2-6ED3-4634-8710-E55DB5CF1D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356526A2-6ED3-4634-8710-E55DB5CF1D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1505076C-8CDF-41F3-A662-E0DB87651754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1505076C-8CDF-41F3-A662-E0DB87651754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1505076C-8CDF-41F3-A662-E0DB87651754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1505076C-8CDF-41F3-A662-E0DB87651754}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
