@@ -13,9 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.Fix-Emails", "04.Fix-Ema
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Hands-of-Cards", "05.Hands-of-Cards\05.Hands-of-Cards.csproj", "{0C5FA656-0A9E-47B6-ADA2-4BA10505091C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.User-Logs", "06.User-Logs\06.User-Logs.csproj", "{356526A2-6ED3-4634-8710-E55DB5CF1D2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.User-Logs", "06.User-Logs\06.User-Logs.csproj", "{356526A2-6ED3-4634-8710-E55DB5CF1D2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.Population-Counter", "07.Population-Counter\07.Population-Counter.csproj", "{1505076C-8CDF-41F3-A662-E0DB87651754}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.Population-Counter", "07.Population-Counter\07.Population-Counter.csproj", "{1505076C-8CDF-41F3-A662-E0DB87651754}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.Population-Counter-V2", "07.Population-Counter-V2\07.Population-Counter-V2.csproj", "{8B67C1C6-3880-4699-B9DF-8D8F6520EF21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Logs-Aggregator", "08.Logs-Aggregator\08.Logs-Aggregator.csproj", "{C8E2E37D-9794-4366-8141-91E984A5B209}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{1505076C-8CDF-41F3-A662-E0DB87651754}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1505076C-8CDF-41F3-A662-E0DB87651754}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1505076C-8CDF-41F3-A662-E0DB87651754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B67C1C6-3880-4699-B9DF-8D8F6520EF21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B67C1C6-3880-4699-B9DF-8D8F6520EF21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B67C1C6-3880-4699-B9DF-8D8F6520EF21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B67C1C6-3880-4699-B9DF-8D8F6520EF21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E2E37D-9794-4366-8141-91E984A5B209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E2E37D-9794-4366-8141-91E984A5B209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E2E37D-9794-4366-8141-91E984A5B209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E2E37D-9794-4366-8141-91E984A5B209}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

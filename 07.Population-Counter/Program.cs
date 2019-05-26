@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 namespace _07.Population_Counter
 {
+    // Completed and works. V2 might be more optimal
+
     class Program
     {
         static void Main(string[] args)
@@ -17,64 +19,66 @@ namespace _07.Population_Counter
 
                 string countryName = input[1];
                 string cityName = input[0];
-                int cityPopulation = int.Parse(input[2]);
+                long cityPopulation = long.Parse(input[2]);
 
-                if (!populationTable.Keys.Contains(countryName)) {
-                    populationTable[countryName] = new Country(countryName, cityName, cityPopulation);
+                if (!populationTable.ContainsKey(countryName)) {
+                    populationTable[countryName] = new Country(countryName);
+                    populationTable[countryName].cities.Add(new Country.City(cityName, cityPopulation));
                 }
-                else if(populationTable[countryName].cities.Contains(cit)){
-
+                else {
+                    populationTable[countryName].cities.Add(new Country.City(cityName, cityPopulation));
                 }
-
             }
 
+            // Orders the countries in the Dictionary 
+            populationTable=populationTable.OrderByDescending(x => x.Value.cities.Sum(y => y.cityPopulation)).ThenBy(x => x.Value.countryNum).ToDictionary(x=>x.Key,elementSelector:y=>y.Value);
+           
+            // Orders the Cities in every country in a descending order by population, keeps those with the same population in order of entry
+            foreach (KeyValuePair<string, Country> country in populationTable) {
+                country.Value.cities=country.Value.cities.OrderByDescending(x => x.cityPopulation).ThenBy(x=>x.cityNum).ToList();
+            }
+
+            // Prints the results
+            foreach (KeyValuePair<string, Country> country in populationTable) {
+
+                Console.WriteLine($"{country.Key} (total population: {country.Value.cities.Sum(x=>x.cityPopulation)})");
+                foreach (Country.City city in country.Value.cities) {
+                    Console.WriteLine($"=>{city.cityName}: {city.cityPopulation}");
+                }
+            }
 
         }
 
         class Country
         {
-            static int numberOfCountries = 0;
-
-            public int entryNum;
+            public static int numberOfCountries = 0;
+            public int countryNum;
             public string countryName;
             public List<City> cities = new List<City>();
 
-            public Country(string countryName,string cityName,int cityPopulation)
+            public Country(string countryName)
             {
                 this.countryName = countryName;
-                cities.Add(new City(cityName, cityPopulation));
-
-                numberOfCountries++;
-                this.entryNum = numberOfCountries;
+                this.countryNum = numberOfCountries++;
             }
 
-            int Population
+            public struct City
             {
-                get { int population=0;
-                    foreach (City city in cities) {
-                        population += city.cityPopulation;
-                    }
-                    return population;
-                }
-            }
+                public static int numberOfCities = 0;
 
-            class City
-            {
-                static int numberOfCities = 0;
-
-                public int entryNum;
+                public int cityNum;
                 public string cityName;
-                public int cityPopulation;
+                public long cityPopulation;
 
-                public City(string cityName,int cityPopulation)
+                public City(string cityName, long cityPopulation)
                 {
                     this.cityName = cityName;
                     this.cityPopulation = cityPopulation;
 
-                    numberOfCities++;
-                    this.entryNum = numberOfCities;
+                    this.cityNum = numberOfCities++;
                 }
             }
+
         }
     }
 }
