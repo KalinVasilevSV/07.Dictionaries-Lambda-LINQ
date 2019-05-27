@@ -4,9 +4,7 @@ using System.Collections.Generic;
 
 namespace _05.Hands_of_Cards
 {
-    //Finished and works but Judge fails it with a compile time error
-    //    Compiled file is missing.Compiler output: ...\tmp27E6.tmp(15,66): error CS1503: Argument 1: cannot convert from 'string' to 'char'
-    //...\tmp27E6.tmp(19,76): error CS1503: Argument 1: cannot convert from 'string' to 'char'
+    //Completed
 
     class Program
     {
@@ -16,11 +14,11 @@ namespace _05.Hands_of_Cards
 
             while (true) {
 
-                string[] input = Console.ReadLine().Trim().Split(": ");
+                string[] input = Console.ReadLine().Trim().Split(':').Select(x=>x.Trim()).ToArray();
                 string name = input[0];
                 if (name == "JOKER") break;
 
-                List<string> draw = new List<string>(input[1].Trim().Split(", ").ToList());
+                List<string> draw = new List<string>(input[1].Trim().Split(',').Select(x=>x.Trim()).ToList());
 
                 if (!handsCollection.ContainsKey(name)) {
                     handsCollection[name] = draw.Distinct().ToList();
@@ -28,7 +26,7 @@ namespace _05.Hands_of_Cards
                 else {
                     handsCollection[name] = handsCollection[name].Concat(draw).Distinct().ToList();
 
-                    ////This is less efficient than above bbut works
+                    ////This is less efficient than above but also works
                     //foreach (string card in draw) {
                     //    if (handsCollection[name].Contains(card)) continue;
                     //    else handsCollection[name].Add(card);
@@ -47,10 +45,10 @@ namespace _05.Hands_of_Cards
                 Console.WriteLine($"{score.Key}: {score.Value}");
             }
 
-            // Prints the hand
-            foreach (KeyValuePair<string, List<string>> hand in handsCollection) {
-                Console.WriteLine($"{hand.Key}: {String.Join(", ", hand.Value)}");
-            }
+            //// Prints the hand
+            //foreach (KeyValuePair<string, List<string>> hand in handsCollection) {
+            //    Console.WriteLine($"{hand.Key}: {String.Join(", ", hand.Value)}");
+            //}
 
         }
 
